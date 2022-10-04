@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        /* *{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* cursor:none; */
+        /* }   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  cursor: none;
+}
+/* body{
+    background-image: url("./game4.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;  
+} */
+body {
+  background-image: url("./wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+/* .cursor{
+   position: absolute;
+    height:100px;
+    transform: translate(-50% ,-50%);
+   z-index: 2;
+   color: black
+   
+} */
+.cursor {
+  position: absolute;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  transition: 0.3s transform ease;
+  transform-origin: 100% 100%;
+}
+
+.container{
+    position: fixed;
+    height: 100%;
+
+}
+/* button{
+   border:4px solid black;
+   font-weight: bolder;
+   color:black;
+   background-color: white;
+   font-size: 1rem;;
+   padding: 15px 69px;
+   margin-top: 3rem;
+   margin-left:36rem;
+   } */
+
+   button {
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 15px 45px;
+  font-size: 1.1rem;
+  margin-top: 3em;
+  outline: none;
+  cursor: none;
+}
+   .bloodSpot{
+    position: absolute;
+    height:150px;
+    z-index: 2;
+    transform: translate(-50% ,-50%);
+   
+   }
+   .terr {
+  height: 100px;
+}
+
+img::selection {
+  background: transparent;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="startBtn">START GAME</button>
+
+        <img src="./cross.png"  class="cursor">
+        <img src="./blood.png"  class="bloodSpot">
+    </div>
+</body>
+<script>
+const bloodSpot = document.querySelector(".bloodSpot");
+const container = document.querySelector(".container");
+const startBtn =document.querySelector(".startBtn");
+
+const terr = document.createElement("img");
+terr.setAttribute("class", "terr");
+terr.setAttribute("src", "./terr.png");
+
+const heightc= container.offsetHeight;
+const widthc = container.offsetWidth;
+
+  setInterval(() => {
+    const Top = Math.random() * (heightc - 100);
+    const Left = Math.random() * (widthc - 100);
+    terr.style.position = "absolute";
+    terr.style.top = Top + "px";
+    terr.style.left = Left + "px";
+  }, 1000); 
+
+  let score = 0;
+
+  startBtn.addEventListener("click",()=>{
+    container.appendChild(terr);
+
+    startBtn.innerHTML = "score:" + score;
+  });
+
+  window.addEventListener("click", (e) => {
+    bloodSpot.style.top = e.pageY + "px";
+    bloodSpot.style.left = e.pageX + "px";
+    if (e.target === terr) {
+      score++;
+    }
+    startBtn.innerHTML = "Score:" + score;
+  });
+
+
+  const cursor = document.querySelector(".cursor");
+  window.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.pageY + "px";
+    cursor.style.left = e.pageX + "px";
+  });
+</script>
+</html>

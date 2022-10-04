@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" class="startBtn" onclick="play() , clock()">START GAME</button>
+        <div class="time">1:00</div>
+
+        <img src="./hair.png" class="cursor">
+        <img src="./blood.png" class="bloodSpot">
+        <span id="span"
+            style=" border-radius:10px;font-size:1.5rem;background: #FEAC5E;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+         margin-left:65rem;margin-top:-40px; background-color: azure ; width:220px;; background-color: cornflowerblue;"></span>
+        <div id="left">KILL</div>
+        <div id="star">EXTRA POINTS EARNED</div>
+        <span class="result"
+            style=" border-radius:10px;font-size:1.5rem;background: #d9a7c7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         margin-left:1rem;margin-top:7px; background-color: azure ; width:220px;; background-color: cornflowerblue;display:none"></span>
+        <button type="button" class="stopBtn" onclick="stop()">RESTART</button>
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

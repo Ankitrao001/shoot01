@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+
+/* body{
+      background-image: url("./game4.jpeg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;  
+  } */
+body {
+  background-image: url("./wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+/* .cursor{
+     position: absolute;
+      height:100px;
+      transform: translate(-50% ,-50%);
+     z-index: 2;
+     color: black
+     
+  } */
+.cursor {
+  position: absolute;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  transition: 0.3s transform ease;
+  transform-origin: 100% 100%;
+}
+
+.container {
+  position: fixed;
+  height: 100%;
+
+}
+
+button {
+  /* border:4px solid black; */
+  font-weight: bolder;
+  color: black;
+  background: #DAE2F8;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-size: 1rem;
+  ;
+  padding: 10px 29px;
+
+  margin-top: 2rem;
+  margin-left: -35rem;
+  /* margin-left: -10rem; */
+  position: relative;
+
+}
+
+.startBtn::selection {
+  background: transparent
+}
+
+
+/* button {
+    color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+    padding: 15px 45px;
+    font-size: 1.1rem;
+    margin-top: 3em;
+    outline: none;
+    cursor: none;
+  } */
+.bloodSpot {
+  position: absolute;
+  height: 150px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+
+}
+.bloodSpot::selection {
+  background: transparent
+}
+
+.terr {
+  height: 100px;
+}
+
+img::selection {
+  background: transparent;
+}
+
+#span {
+  display: none;
+}
+
+.stopBtn {
+  font-weight: bolder;
+  color: black;
+  background: #DAE2F8;
+  background: -webkit-linear-gradient(to right, #D6A4A4, #DAE2F8);
+  background: linear-gradient(to right, #D6A4A4, #DAE2F8);
+  font-size: 1rem;
+  padding: 11px 29px;
+  margin-top: 3rem;
+  margin-left: -22.5rem;
+  position: static;
+}
+
+.time {
+  /* background-color: #fff; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bolder;
+
+  height: 50px;
+  width: 200px;
+}
+
+#left {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-left:50rem;
+  margin-top: -40px;
+  background-color: azure;
+  width: 148px;
+  ;
+  position: static;
+  background-color: cornflowerblue;
+  background: #d9a7c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#star {
+
+
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-top: 5px;
+  background-color: azure;
+  width: 220px;
+  ;
+  background-color: cornflowerblue;
+  background: #d9a7c7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fffcdc, #d9a7c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: none;
+
+}
+
+.result::selection {
+  background: transparent;
+}
+
+#left::selection {
+  background: transparent;
+}
+
+#span::selection {
+  background: transparent;
+}
+
+.time::selection {
+  background: transparent;
+}
+
+.stopBtn::selection {
+  background: transparent;
+  float : left;
+}
+
+/* @media screen and (min-width: 500px) and (max-width: 1537px) {
+  body {
+    background-color: red;
+    background-image: none;
+  }
+
+  .stopBtn {}
+} */
